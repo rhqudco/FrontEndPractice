@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #parent {
+            /* 위치 지정하지 않음 */
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 200px;
+            height: 300px;
+            border: solid 5px #000000;
+        }
+        #boxA, #boxB, #boxC {
+            width: 80px;
+            height: 80px;
+        }
+        #boxA {background-color: #ff0000;}
+        #boxB {background-color: #00ff00;}
+        #boxC {background-color: #fff000;}
+
+        #boxB {
+            /* relative : static에 해당되는 원래 위치를 기준으로
+            20, 30 만큼 이동 */
+        /* position: relative;  */
+        /* absolute : 상위 요소 위치 지정 안했기 때문에 브라우저 기준으로 20, 30만큼 이동 */
+        position: absolute;
+        top: 20px;
+        left:30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="boxA">A</div>
+        <div id="boxB">B</div>
+        <div id="boxC">C</div>
+    </div>
+</body>
+</html>
