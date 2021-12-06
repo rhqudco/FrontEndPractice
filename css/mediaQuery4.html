@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name=”viewport” content=”width=divice-width, initial-scale=1”>
+		
+		<title>미디어 쿼리 : 외부 CSS 사용</title>
+		<style type="text/css">
+			div {
+					margin:0 auto;
+					width:50%;
+				}
+				
+			img{
+				width:100%;
+				border:solid 1px; 
+			}		
+		</style>
+		<!-- 모바일용 -->
+		<link rel="stylesheet" href="mobile.css" media="(max-width:800px)">
+		<!-- PC용 -->
+		<link rel="stylesheet" href="pc.css" media="(min-width:800px)">
+	</head>
+	<body>
+		<div><img src="image/사진.jpg"></div>	
+	</body>
+</html>
