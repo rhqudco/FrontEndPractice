@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script type="text/javascript">
+            var name = "홍길동";
+            document.write(name + "<br>");
+            var name = "이몽룡";
+            document.write(name + "<br>");
+            // 홍길동
+            // 이몽룡 출력됨
+            // 동일 변수명으로 중복 선언해도 오류 없고 다른 값으로 출력 됐다.
+
+            // let name = "성춘향";
+            // document.write(name + "<br>");
+            // Uncaught SyntaxError: Identifier 'name' has already been declared
+            // 이미 사용됐기 때문에 사용 불가능
+            let name2 = "성춘향";
+            document.write(name2 + "<br>");
+            // 사용 가능
+
+            sumi = 0;
+            for(var i = 0; i < 10; i++) {
+                sumi += i;
+            }
+            document.write(i + "<br>"); // 10 출력 => i는 for문 밖에서도 사용 가능하다. 
+
+            // sumj = 0;
+            // for(let j = 0; j < 10; j++) {
+            //     sumj += j;
+            // }
+            // document.write(j); //  j is not defined 출력 안됨. => let은 해당 블록 안에서만 유효한 값.
+
+            // const : 상수 개념. 값을 변경할 수 없다.
+            let name3 = "홍길동";
+            document.write(name3 + "<br>");
+            name3 = "이몽룡";
+            document.write(name3 + "<br>")
+            const address = "서울";
+            document.write(address + "<br>")
+            // address = "부산";
+            // document.write(address + "<br>") // Assignment to constant variable. => 값 변경 불가능.
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

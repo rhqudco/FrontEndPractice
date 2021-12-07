@@ -8,5 +8,15 @@
         "    <script src=\"js/bootstrap.min.js\"></script>"
       ],
       "description": "bootstrap 템플릿입니다."
+    },
+    "jasc": {
+      "scope": "html",
+      "prefix": "jasc",
+      "body": [
+        "    <script type=\"text/javascript\">",
+        "        ",
+        "    </script>"
+      ],
+      "description": "javascript 템플릿."
     }
   }
