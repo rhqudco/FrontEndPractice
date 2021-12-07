@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap navBar</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.6.0.min.js"></script>  <!-- jquery가 먼저 와야 함 -->
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- navBar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a class="nav-link" href="#">HOME</a> </li>
+                <li class="nav-item"><a class="nav-link" href="#">LINK1</a> </li>
+                <li class="nav-item"><a class="nav-link" href="#">LINK2</a> </li>
+                <li class="nav-item"><a class="nav-link" href="#">LINK3</a> </li>
+                <li class="nav-item"><a class="nav-link" href="#">LINK4</a> </li>
+                <li class="nav-item"><a class="nav-link" href="#">LINK5</a> </li>
+                <!-- 드롭다운 메뉴 -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown">DropDown</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item">Dropdown Item1</a>
+                        <a class="dropdown-item">Dropdown Item2</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item">Dropdown Item3</a>
+                        <hr>
+                        <a class="dropdown-item">Dropdown Item4</a>
+                    </div>
+                </li>
+            </ul>
+            <!-- 검색 form 추가 -->
+            <form class="form-inline">
+                <input class="form-control mr-lg-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+        </nav>
+    </div>
+</body>
+</html>
