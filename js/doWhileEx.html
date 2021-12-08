@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script type="text/javascript">
+            var count = 0;
+            do {
+                var check = confirm("계속 경고창을 보시겠습니까?");
+                if(check == true) {
+                    count++;
+                    alert("경고 " + count);
+                }
+            }
+            while(check == true) 
+            document.write("경고창 출력 횟수 : " + count);
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script type="text/javascript">
+            var prdNo = prompt("상품번호 입력", "1 또는 2 입력");
+            var laptopPrice = 1200000;
+            var airJordan = 100000;
+            if(prdNo == 1 ) {
+                let order = prompt("주문수량 입력");
+                let total = laptopPrice * order;
+                document.write("상품명 : 노트북<br>");
+                document.write("가격 : 1,200,000원<br>");
+                document.write("주문수량 : " + order + "개<br>");
+                document.write("주문액 : " + total.toLocaleString() + "원<br>");
+                document.write("할인액 : " + (total * 0.1).toLocaleString() + "원<br>");
+                document.write("총 지불액 : " + (total * 0.9).toLocaleString() + "원<br>");
+            }
+            else if(prdNo == 2 ) {
+                let order = prompt("주문수량 입력");
+                let total = airJordan * order;
+                document.write("상품명 : 운동화<br>");
+                document.write("가격 : 100,000원<br>");
+                document.write("주문수량 : " + order.toLocaleString() + "개<br>");
+                document.write("주문액 : " + total.toLocaleString() + "원<br>");
+                if( total < 500000) {
+                    document.write("할인액 : 0 원<br>");
+                    document.write("총 지불액 : " + total.toLocaleString() + "원<br>");
+                }
+                else if ( total >= 500000 && total < 1000000 ) {
+                    document.write("할인액 : " + (total * 0.05).toLocaleString() + "원<br>");
+                    document.write("총 지불액 : " + (total * 0.95).toLocaleString() + "원<br>");
+                }
+                else if ( total >= 1000000 ) {
+                    document.write("할인액 : " + (total* 0.1).toLocaleString() + "원<br>");
+                    document.write("총 지불액 : " + (total * 0.9).toLocaleString() + "원<br>");
+                }
+            }
+            else {
+                alert("잘못된 입력");
+                document.write("종료합니다");
+            }
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
