@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script type="text/javascript">
+            function input() {
+                var arr = new Array(5);
+                for(var i = 0; i < arr.length; i++) {
+                    arr[i] = prompt("배열 arr[" + i + "]번 인덱스 입력");
+                }
+                document.write("최대 값 : " + max(arr));
+            }
+            function max(arr) {
+                var max = 0;
+                for(var i = 0; i < arr.length; i++) {
+                    if(max < arr[i]) {
+                        max = arr[i]
+                    }
+                }
+                return max;
+            }
+        </script>
+</head>
+<body onload="input()">
+</body>
+</html>

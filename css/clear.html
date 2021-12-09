@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #menu {list-style: none; padding: 0;}
+        #menu li {float: right;}
+        #p1 {clear: both;}
+
+        #menu2 {list-style: none; padding: 0;}
+        #menu2 li {float: right;}
+        #menu2::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+        /* .claerfix::after {
+            display: block;
+            content: "";
+            clear: both;
+        } */
+
+        #menu3 {list-style: none; 
+            padding: 0;
+            height: 20px;
+        }
+        #menu3 li {float: right;}
+    </style>
+</head>
+<body>
+    <!-- 다음 요소에 clear 적용  -->
+    <div>
+        <ul id="menu">
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+        </ul>
+        <p id="p1">메뉴 다음에 오는 요소</p>
+    </div>
+
+    <hr>
+    <!-- 부모 요소에 clear 적용 -->
+    <div>
+        <ul id="menu2">
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+        </ul>
+        <p id="p2">메뉴 다음에 오는 요소</p>
+    </div>
+
+    <hr>
+    <!-- 부모 요소에 height를 주면 문제가 생기지 않는다.  -->
+    <div>
+        <ul id="menu3">
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+        </ul>
+        <p id="p3">메뉴 다음에 오는 요소</p>
+    </div>
+</body>
+</html>

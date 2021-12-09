@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script type="text/javascript">
+            // 익명 함수는 호이스팅 불가
+            //  sum(100, 200); // sum is not a function
+            // 익명 함수 : 변수명에 함수 코드 저장
+            var sum = function(a, b) {
+                document.write(a + b + "<br>");
+            }; // 세미 콜론 작성.
+            
+            // 함수 호출 시 변수명을 함수명처럼 사용
+            sum(5, 10); // 15
+            // 다른 변수 add 이름으로 기존 sum 재사용
+            var add = sum(10, 20); // 30
+            // sum 함수도 그대로 사용 가능
+            sum(3, 10); // 13
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

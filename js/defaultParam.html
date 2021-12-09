@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script type="text/javascript">
+            function rect(width=10, height=20) {
+                document.write("width : " + width);
+                document.write(" height : " + height + " <br>");
+                return width*height;
+            }
+            document.write(rect() + "<br>");
+            document.write(rect(30) + "<br>");
+            document.write(rect(100, 200) + "<br>");
+            // width : 10 height : 20
+            // 200
+            // width : 30 height : 20
+            // 600
+            // width : 100 height : 200
+            // 20000
+            /////////////////////////////////////////////////////////////////////////////////
+            document.write("<hr>")
+            function showInfo(name, year=4, score) {
+                document.write("name : " + name + "<br>");
+                document.write("year : " + year + "<br>");
+                document.write("score : " + score + "<br>");
+            }
+            showInfo();
+            // name : undefined
+            // year : 4
+            // score : undefined
+            showInfo("홍길동");
+            // name : 홍길동
+            // year : 4
+            // score : undefined
+            showInfo("홍길동", 80);
+            // name : 홍길동
+            // year : 80
+            // score : undefined
+            /////////////////////////////////////////////////////////////////////////////////
+            document.write("<hr>")
+            function showInfo2(name, score, year=4) { // 디폴트 매개변수는 맨 뒤에 위치해야 한다.
+                document.write("name : " + name + "<br>");
+                document.write("year : " + year + "<br>");
+                document.write("score : " + score + "<br>");
+            }
+            showInfo2();
+            // name : undefined
+            // year : 4
+            // score : undefined
+            showInfo2("홍길동");
+            // name : 홍길동
+            // year : 4
+            // score : undefined
+            showInfo2("홍길동", 80);
+            // name : 홍길동
+            // year : 4
+            // score : 80
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
