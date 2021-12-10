@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {margin: 0 auto; width: 600px; text-align: center;}
+        table {margin: 0 auto; width: 100%;}
+        td {width: 50px; height: 30px;}
+    </style>
+        <script type="text/javascript">
+            window.onload = function() {
+                // 모든 td 요소 가져오기.
+                var tdArr = document.getElementsByTagName('td');
+
+                var setNumber = document.getElementById('setNumberBtn');
+                var setColor = document.getElementById('setColorBtn');
+                var clearNumber = document.getElementById('clearNumberBtn');
+                var clearColor = document.getElementById('clearColorBtn');
+                var colorArr = ['yellow', 'green', 'blue', 'gold', 'grey', 'red', 'purple']
+                setNumber.onclick = function() {
+                    for(var i = 0; i < tdArr.length; i++) {
+                        tdArr[i].innerHTML = i;
+                    }
+                }
+                clearNumber.onclick = function() {
+                for(var i = 0; i < tdArr.length; i++) {
+                    tdArr[i].innerHTML = null;
+                    }
+                }
+                setColor.onclick = function() {
+                    for(var i = 0; i < tdArr.length; i++) {
+                        tdArr[i].style.background = colorArr[i];
+                    }
+                }
+                clearColor.onclick = function() {
+                for(var i = 0; i < tdArr.length; i++) {
+                    tdArr[i].style.background = 'white';
+                    }
+                }
+            };
+        </script>
+</head>
+<body>
+    <div>
+        <table border="1">
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+        </table>
+        <br><br>
+        <button id="setNumberBtn">셀에 번호 채우기</button>
+        <button id="setColorBtn">셀에 색상 채우기</button>
+        <br><br>
+        <button id="clearNumberBtn">셀에 번호 지우기</button>
+        <button id="clearColorBtn">셀에 색상 지우기</button>
+    </div> 
+</body>
+</html>

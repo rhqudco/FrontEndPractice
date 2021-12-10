@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script type="text/javascript">
+            window.onload = function() {
+                let box = document.getElementById("box");
+
+                box.addEventListener("mousedown", () => {
+                    box.style.background = 'green';
+                });
+                box.addEventListener("mouseup", event => {
+                    event.currentTarget.style.background = 'white';
+                });
+            }
+        </script>
+</head>
+<body>
+    <div id="box">클릭</div>
+</body>
+</html>

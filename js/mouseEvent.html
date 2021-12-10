@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script type="text/javascript">
+            window.onload = function() {
+                var birdImg = document.getElementById('birdImg');
+
+                birdImg.onmouseover = function() {
+                    birdImg.style.opacity = 0.5; // 투명도
+                }
+                birdImg.onmouseout = function() {
+                    birdImg.style.opacity = 1;
+                }
+            };
+
+            // 문서 상에서 오른쪽 마우스 클릭했을 때 이벤트 처리
+            document.oncontextmenu = function() {
+                alert("오른쪽 마우스 사용을 금지 합니다.");
+                // return false;
+                event.preventDefault();
+            };
+        </script>
+</head>
+<body>
+    <img id="birdImg" src="image/bird.jpg">
+</body>
+</html>

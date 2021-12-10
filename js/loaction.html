@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script type="text/javascript">
+            function hrefMove() { // 뒤로가기 가능
+                location.href = "http://www.google.com"; // 크롬 사용시
+                // window.location.href("http://www.google.com"); // 크롬에서는 지원 안되는 형식
+            }
+            function assignMove() { // 뒤로가기 가능
+                location.assign("http://www.daum.net");
+            }
+            function replaceMove() { // 뒤로가기 불가능
+                location.replace("http://www.youtube.com");
+            }
+        </script>
+</head>
+<body>
+    <a href="www.naver.com">네이버</a><br><br>
+    <button onclick="hrefMove()">구글</button>
+    <button onclick="assignMove()">다음</button>
+    <button onclick="replaceMove()">유튜브</button>
+</body>
+</html>

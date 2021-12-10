@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script type="text/javascript">
+            // 새로운 창을 만들어서 열기
+            // 새로운 창에 문자열과 버튼 출력 / 버튼 클릭시 창 닫음
+            function openNewWindow() {
+                var createWin = window.open("", "newWind", "width=400, height=150")
+                createWin.document.write("새로 만든 윈도우.<br>");
+                createWin.document.write("<button onclick=\"window.close()\">닫기</button>");
+            }
+            function openWindow() {
+                window.open("windowOpen.html", "bigWin", "width=200, height=400, top=50, left=400, scrollbars=yes, status=yes, resizable=yes");
+            }
+        </script>
+</head>
+<body>
+    <button onclick="openNewWindow()">새 창 열기</button>
+    <button onclick="openWindow()">Big Image 열기</button>
+</body>
+</html>
