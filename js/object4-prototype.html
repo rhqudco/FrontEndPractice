@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script type="text/javascript">
+            function People() {
+                this.age = 20;
+            }
+            var person1 = new People();
+            var person2 = new People();
+            var person3 = new People();
+
+            // person1 객체에 메소드 추가
+            person1.setAge = function() {
+                this.age += 10;
+            }
+
+            // 프로토타입 프로퍼티에 setAge() 메소드 정의
+            People.prototype.setAge = function() { // People의 모든 객체에 사용하는 것.
+                this.age += 1;
+            }
+
+            // 프로토타입 프로퍼티에 getAge() 메소드 정의
+            People.prototype.getAge = function() { // People의 모든 객체에 사용하는 것.
+                return this.age;
+            }
+
+            person1.setAge(); // person1.setAge() 호출됨
+            person2.setAge(); // People.prototype.setAge() 호출
+            person3.setAge(); // People.prototype.setAge() 호출
+
+            // console.log(person1.age); // 30
+            // console.log(person2.age); // 21
+            // console.log(person3.age); // 21
+
+            console.log(person1.getAge()); // 30
+            console.log(person2.getAge()); // 21
+            console.log(person3.getAge()); // 21
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

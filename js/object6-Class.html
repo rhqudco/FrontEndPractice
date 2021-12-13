@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script type="text/javascript">
+            class Person {
+                // 생성자
+                constructor(name, age) {
+                    // 프로퍼티 정의
+                    this.name = name;
+                    this.age = age;
+                }
+                // Getter : 프로퍼티 반환
+                get name() {
+                    return this._name;
+                }
+                get age() {
+                    return this._age;
+                }
+                // Setter : 프로퍼티 값 설정
+                set name(name) {
+                    this._name = name;
+                }
+                set age(age) {
+                    this._age = age;
+                }
+                // 필요한 메소드 추가
+                toString() {
+                    return this.name + "은 " + this.age + "살 입니다.";
+                }
+            }
+            // 호이스팅 불가 : 클래스 생성 이전 객체 생성 불가
+            let person1 = new Person("홍길동", 25);
+            let person2 = new Person("이몽룡", 30);
+            // getter 호출
+            console.log("성명 : " + person1.name + " 나이 : " + person1.age); // 성명 : 홍길동 나이 : 25
+            console.log("성명 : " + person2.name + " 나이 : " + person2.age); // 성명 : 이몽룡 나이 : 30
+            // toString() 메소드 호출
+            console.log(person1.toString()); // 홍길동은 25살 입니다.
+            console.log(person2.toString()); // 이몽룡은 30살 입니다
+            // setter 호출 : 괄호 없음
+            person1.age = 27;
+            console.log(person1.toString()); // 홍길동은 27살 입니다.
+            person2.name = "성춘향";
+            person2.age = 20;
+            console.log(person2.toString()); // 성춘향은 20살 입니다.
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

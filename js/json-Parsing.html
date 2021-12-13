@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script type="text/javascript">
+            let car = {
+                no : "11가 1111",
+                name : "소나타",
+                maker : "현대",
+                cc : 2000,
+                year : 2021
+            };
+            // 자바스크립트 객체를 JSON 데이터로 변환
+
+            console.log(car)
+            // {no: '11가 1111', name: '소나타', maker: '현대', cc: 2000, year: 2021}
+
+            var json = JSON.stringify(car);
+            console.log(json);
+            // {"no":"11가 1111","name":"소나타","maker":"현대","cc":2000,"year":2021}
+
+            // JSON 데이터를 자바스크립트 객체로 변환
+            var obj = JSON.parse(json);
+            console.log(obj);
+            // {no: '11가 1111', name: '소나타', maker: '현대', cc: 2000, year: 2021}
+            console.log(obj.no); // 11가 1111
+            console.log(obj.name); // 소나타
+
+            for(var i in obj) {
+                console.log(obj[i]);
+            }
+            // 11가 1111
+            // 소나타
+            // 현대
+            // 2000
+            // 2021
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

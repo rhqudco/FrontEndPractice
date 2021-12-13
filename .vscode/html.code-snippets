@@ -18,5 +18,37 @@
         "    </script>"
       ],
       "description": "javascript 템플릿."
+    },
+    "jq": {
+      "scope": "html",
+      "prefix": "jq",
+      "body": [
+        "    <script src=\"jquery-3.6.0.min.js\"></script>",
+        "    <script type=\"text/javascript\">",
+        "        ",
+        "    </script>"
+      ],
+      "description": "javascript와 jQuery 템플릿."
+    },
+    "jqdc": {
+      "scope": "html",
+      "prefix": "jqdc",
+      "body": [
+        "    <script src=\"jquery-3.6.0.min.js\"></script>",
+        "    <script type=\"text/javascript\">",
+        "       $(document).ready(function() {",
+        "            ",
+        "       });",
+        "    </script>"
+      ],
+      "description": "javascript와 jQuery 템플릿."
     }
   }
+
+
+
+
+
+
+
+
