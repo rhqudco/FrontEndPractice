@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script src="jquery-3.6.0.min.js"></script>
+        <script type="text/javascript">
+           $(document).ready(function() {
+                // 윈도우 크기가 변경될 때 resize 이벤트 발생 / 처리
+                $(window).resize(function() {
+                    // 윈도우 크기 알아와서 크기에 따라 배경색 변경(변수에 색상 값 저장)
+                    var windWidth = $(window).width();
+                    var winHeight = $(window).height();
+                    //<h3> 태그에 크기 출력
+                        $('h3').text("윈도우 크기 : " + windWidth + ' * ' + winHeight)
+                    // 크기에 따라 배경 색 변경 : 변수에 색상 값 지정
+                    var bgColor;
+                    if(windWidth >= 900)
+                    bgColor = "green";
+                    else if(windWidth >= 700)
+                    bgColor = "yellow";
+                    else
+                    bgColor = "red";
+
+                    // 변수에 저장된 값에 따라 문서 배경색 변경
+                    $('body').css('background-color', bgColor);
+                }); // resize 끝
+           });
+        </script>
+</head>
+<body>
+    <h3>윈도우 크기 : 윈도우 크기를 변경해 보세요.</h3>
+</body>
+</html>

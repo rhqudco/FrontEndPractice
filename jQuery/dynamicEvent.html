@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script src="jquery-3.6.0.min.js"></script>
+        <script type="text/javascript">
+           $(document).ready(function() {
+                // createBtn 눌렀을 때 새 버튼 두 개 생성
+                $('#createBtn').on('click', function() {
+                    $(this).after("<p><button id='newBtn1'>새 버튼 1</button>" + "<p><button id='newBtn2'>새 버튼 2</button>" )
+                });
+                // 정적 이벤트 연결 방식으로 이벤트 처리
+                // 새로 생성된 요소에 이벤트 등록 되지 않음
+                $('#newBtn1').on('click', function() {
+                    alert("[새 버튼 1]을 클릭 했음")
+                });
+                // 동적 이벤트 연결 방식으로 이벤트 처리
+                // 클릭 이벤트 등록 처리되어서 알림창 출력
+                $(document).on('click', '#newBtn2', function() {
+                    alert("[새 버튼 2]를 클릭 했음")
+                });
+           });
+        </script>
+</head>
+<body>
+    <button id="createBtn">새 버튼 만들기</button>
+</body>
+</html>

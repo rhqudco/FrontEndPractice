@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #Btn {
+            border: rgb(73, 122, 124) solid;
+            border-radius: 20px;
+            font-size: 20px;
+            color: white;
+            width: 80px;
+            height: 50px;
+            background-color: rgb(73, 122, 124);
+        }
+    </style>
+        <script src="jquery-3.6.0.min.js"></script>
+        <script type="text/javascript">
+           $(document).ready(function() {
+                $('#Btn').on({
+                    mouseover:function() {
+                        $(this).css('opacity', '0.5');
+                    },
+                    mouseout:function() {
+                        $(this).css('opacity', '1.0');
+                    }});
+           });
+        </script>
+</head>
+<body>
+    <button id="Btn">버튼</button>
+</body>
+</html>
