@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script src="jquery-3.6.0.min.js"></script>
+        <script type="text/javascript">
+           $(document).ready(function() {
+               // 현재 세 개의 이벤트 리스너가 수행
+               // 클릭1, 클릭 2만 수행되게 하고 다른 리스너는 중지 및 상위 전파 중지
+                $('#btn').on('click', function() {
+                    alert("클릭1");
+                })
+                $('#btn').on('click', function(e) {
+                    e.stopImmediatePropagation();
+                    alert("클릭2");
+                })
+                $('#btn').on('click', function() {
+                    alert("클릭3");
+                })
+           });
+        </script>
+</head>
+<body>
+    <button id="btn">클릭</button>
+</body>
+</html>
