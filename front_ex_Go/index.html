@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {margin: 0 auto; padding-left: 45%;}
+        #SubReBtn {padding-left: 25%;}
+    </style>
+    <script>
+        window.onload = function() {
+            document.getElementById('joinForm').onsubmit = function() {
+                var id = document.getElementById('id');
+            if(id.value == "") {
+                alert("아이디를 입력해주세요");
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+<form name="newMemberForm" id="joinForm">
+    <div id="wrap">
+        <h1>로그인</h1>
+        <hr>
+        <table align="center" border="0">
+            <tr>
+                <td>아이디  &nbsp;&nbsp;</td>
+                <td><input type="text" name="id" id="id" border=0 size="20">
+                </td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="password" name="password" id="password" size="20">
+                </td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <td colspan="2" row align="center" id="SubReBtn">
+                <input type="submit" value="로그인"id="Submit">
+                    &nbsp;
+                <input type="reset" value="취  소" id="Cancel">
+            </td>
+        </table>
+    </div>
+</form>
+</body>
+</html>

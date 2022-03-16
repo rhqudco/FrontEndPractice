@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Chrome",
+            "type": "process",
+            "command": "chrome.app",
+            "windows": {
+                "command": "/Applications/chrome.app"
+            },
+            "args": [
+                "${file}"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
