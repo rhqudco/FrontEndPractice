@@ -25,7 +25,6 @@ const AxiosSpring = () => {
     return (
         <div>
             <Top></Top>
-            <Home></Home>
         </div>
     );
 };

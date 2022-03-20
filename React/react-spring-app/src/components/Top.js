@@ -18,6 +18,7 @@ function Top() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/productList" element={<ProductList />} />
+                <Route path="/productDatailview/:prdNo" element={<ProductDatailview />} />
             </Routes>
         </div >
     );
