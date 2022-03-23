@@ -1,13 +1,10 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import Top from './Top';
-import Home from './Home';
+import axios from 'axios';
 
-const AxiosSpring = () => {
+function AxiosSpring(props) {
     // state
-    const [data, setData] = useState([]);
+    const [data, setData] = useState('');
     const [loading, setLoading] = useState(false);
-
 
     // 서버에 요청해서 데이터 받아옴
     // state 값 저장
@@ -19,14 +16,18 @@ const AxiosSpring = () => {
         setLoading(false);
     }
 
+    // 렌더링할 때마다 호출 
+    // 빈배열 : loadData() 한 번만 호출
     useEffect(() => {
         loadData();
     }, []);
+
     return (
         <div>
-            <Top></Top>
+            <h3>서버로부터 받아온 값</h3>
+            {data}
         </div>
     );
-};
+}
 
 export default AxiosSpring;

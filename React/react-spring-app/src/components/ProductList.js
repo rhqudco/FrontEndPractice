@@ -40,7 +40,7 @@ function ProductList(props) {
                 </thead>
                 <tbody>
                     {
-                        data.map(function(prd, i) {
+                        data.map(function (prd, i) {
                             return <ProductListItem prd={prd} key={i} />
                         })
                     }
